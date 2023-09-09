@@ -4,6 +4,7 @@ import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { useGetPortfolioDataQuery } from "../state/rtkApis";
 import { dataForPortfolio } from "../utils/formatData";
+import Loader from "./Loader";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -43,15 +44,15 @@ const Portfolio = () => {
 		}
 	}, [isSuccess, rawData]);
 
-	if (isLoading) {
-		// Display loading message while data is being fetched
-		return <section>Loading...</section>;
-	}
-
 	return (
 		<section className="bg-white shadow-md rounded-md w-full py-5 px-6 lg:px-4 xl:px-8 h-full space-y-4">
 			<section className="text-2xl md:text-lg xl:text-xl font-bold flex justify-between">
 				<p>Portfolio</p>
+				{isLoading && (
+					<section>
+						<Loader />
+					</section>
+				)}
 				<section>
 					<span className="text-gray-600 text-xl md:text-lg xl:text-xl font-bold">
 						Total Value{" "}

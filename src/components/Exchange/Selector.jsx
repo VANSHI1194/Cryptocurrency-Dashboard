@@ -24,7 +24,7 @@ const Selector = ({ coins, handleChange }) => {
 	};
 
 	return (
-		<section className="dropdown dropdown-top w-fit">
+		<section className="dropdown dropdown-top">
 			{/* Label that acts as a button to open/close the dropdown */}
 			<label
 				tabIndex={0}

@@ -44,7 +44,7 @@ const MainGraph = () => {
 	return (
 		<section className="border border-gray-300 rounded-md shadow-md py-2 px-4">
 			{/* Top section containing duration selection and graph type options */}
-			<section className="flex flex-col sm:flex-row items-center justify-between">
+			<section className="flex flex-col lg:flex-row items-center justify-between">
 				{/* Component to select the duration */}
 				<Duration updateDaysAndInterval={updateDaysAndInterval} />
 
@@ -54,7 +54,9 @@ const MainGraph = () => {
 					<SelectType updateGraphToRender={updateGraphToRender} />
 
 					{/* Component for multi-selection options (if applicable) */}
-					<MultiSelector />
+					<div className="w-full max-w-[180px] xl:max-w-xs">
+						<MultiSelector />
+					</div>
 				</section>
 			</section>
 

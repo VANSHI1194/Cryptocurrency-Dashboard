@@ -4,15 +4,19 @@ This web application offers a comprehensive dashboard for monitoring and analyzi
 
 ## Demo
 
+Project Link:- https://cryptocurrency-dashboard-lime.vercel.app/
+
 ## Installation
 
-Install Cryptocurrency Dashboard with npm
+```
+Install with npm
 
 bash
 
 npm install
 
 npm run dev
+```
 
 ## Features
 
@@ -29,11 +33,23 @@ npm run dev
 
 ## API Reference
 
+#### Market Cap
+
+```
 https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en
+```
 
+#### Exchange Rates
+
+```
 https://api.coingecko.com/api/v3/exchange_rates
+```
 
+#### Main Graph
+
+```
 https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=1690643662&to=1659087812
+```
 
 ## Framework/dependencies
 
@@ -53,4 +69,4 @@ https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=us
 
 ## Screenshots
 
-![App Screenshot](https://github.com/abharani/CryptoCurrency-Dashboard/blob/c0c280697d0cee54cb001155cd4f6950fcb8ae30/cryptoDashboard.png)
+![App Screenshot](https://drive.google.com/file/d/1nU6b47MAOhz3JtsIs3Ij8aLpbZMi52eZ/view)

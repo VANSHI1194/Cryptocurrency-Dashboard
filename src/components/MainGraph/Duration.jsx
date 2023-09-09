@@ -15,7 +15,7 @@ const Duration = ({ updateDaysAndInterval }) => {
 	};
 
 	return (
-		<section className="space-x-3">
+		<section className="space-x-2 lg:space-x-3">
 			{/* Map over the button data and create buttons for each duration option */}
 			{buttonData.map((item, idx) => (
 				<button

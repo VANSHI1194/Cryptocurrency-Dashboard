@@ -28,7 +28,7 @@ const MultiSelector = () => {
 	};
 
 	return (
-		<section className="w-full max-w-md p-4">
+		<section className="w-full p-4">
 			{/* Render the MultiSelect component with the available options and selected values */}
 			<MultiSelect
 				options={options}

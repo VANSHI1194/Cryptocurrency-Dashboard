@@ -54,6 +54,26 @@ const colors = [
       backgroundColor: 'brown',
       borderColor: '#5D4037', // Darker shade of brown
    },
+   {
+      backgroundColor: 'orange',
+      borderColor: '#FF4500', // Darker shade of orange
+   },
+   {
+      backgroundColor: 'teal',
+      borderColor: '#008080', // Darker shade of teal
+   },
+   {
+      backgroundColor: 'navy',
+      borderColor: '#000080', // Darker shade of navy
+   },
+   {
+      backgroundColor: 'maroon',
+      borderColor: '#800000', // Darker shade of maroon
+   },
+   {
+      backgroundColor: 'indigo',
+      borderColor: '#4B0082', // Darker shade of indigo
+   },  
 ];
 
 // Function to convert Unix timestamps to formatted date strings

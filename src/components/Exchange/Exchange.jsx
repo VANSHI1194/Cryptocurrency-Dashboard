@@ -1,11 +1,12 @@
 import Selector from "./Selector";
 import { useGetExhangeDataQuery } from "../../state/rtkApis";
 import { useEffect, useState } from "react";
+import Loader from "../Loader";
 
 // The Exchange component is responsible for handling currency exchange operations.
 const Exchange = () => {
 	// Query the exchange rate data using the RTK Query
-	const { data, isSuccess, refetch } =
+	const { data, isSuccess, refetch, isLoading } =
 		useGetExhangeDataQuery("/exchange_rates");
 
 	// State to store the list of available coins
@@ -66,6 +67,12 @@ const Exchange = () => {
 		<section className="flex flex-col gap-3 justify-between py-4 px-5 lg:px-3 xl:px-9 h-72 md:h-full rounded-md shadow-md bg-white">
 			{/* Section title */}
 			<p className="text-2xl md:text-lg xl:text-xl font-bold">Exchange Coins</p>
+
+			{isLoading && (
+				<section>
+					<Loader />
+				</section>
+			)}
 
 			{/* Sell section */}
 			<section className="w-full flex items-center">

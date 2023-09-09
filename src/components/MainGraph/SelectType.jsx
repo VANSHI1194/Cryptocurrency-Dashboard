@@ -60,7 +60,7 @@ const SelectType = ({ updateGraphToRender }) => {
 				{/* Label that acts as a button to open/close the dropdown */}
 				<label
 					tabIndex={0}
-					className="btn px-5 text-lg focus:outline-none focus:ring-2 focus:ring-red-600 capitalize"
+					className="btn px-5 text-base lg:text-lg focus:outline-none focus:ring-2 focus:ring-red-600 capitalize"
 					onClick={toggleDropdown}
 				>
 					{selectedGraph}

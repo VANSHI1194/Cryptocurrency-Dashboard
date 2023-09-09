@@ -3,6 +3,7 @@ import { useGetSideBarDataQuery } from "../../state/rtkApis";
 import SingleItem from "./SingleItem";
 import { useDispatch, useSelector } from "react-redux";
 import { setCoinsList } from "../../state/globalStates";
+import Loader from "../Loader";
 
 // The SideBar component fetches and displays a list of cryptocurrencies in the sidebar.
 const SideBar = () => {
@@ -21,6 +22,7 @@ const SideBar = () => {
 		isSuccess,
 		isError,
 		error,
+		isLoading,
 	} = useGetSideBarDataQuery(url);
 
 	// Update the Redux store with the fetched list of cryptocurrencies
@@ -34,6 +36,11 @@ const SideBar = () => {
 
 	return (
 		<section className="space-y-2">
+			{isLoading && (
+				<section>
+					<Loader />
+				</section>
+			)}
 			{/* Render each cryptocurrency item in the sidebar */}
 			{coins &&
 				coins.map((coin, idx) => (
